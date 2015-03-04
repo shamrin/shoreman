@@ -34,8 +34,8 @@ log() {
 
   while read -r data
   do
-    printf "\033[0;%sm%s %s\033[0m" "$color" "$(date +"%H:%M:%S")" "$1"
-    printf "\t| %s\n" "$data"
+    printf "\033[0;%sm%s %s\033[0m\t| %s\n" \
+           "$color" "$(date +"%H:%M:%S")" "$1" "$data"
   done
 }
 
